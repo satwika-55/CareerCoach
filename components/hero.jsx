@@ -1,8 +1,11 @@
 "use client"
 
 import { Link } from 'lucide-react';
-import React, { use } from 'react'
+// import React, { use } from 'react'
 import { Button } from './ui/button';
+import React, { useRef, useEffect } from "react";
+import Image from "next/image";
+
 
 const HeroSection = () => {
     const imageRef = useRef(null);
