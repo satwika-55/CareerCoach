@@ -2,6 +2,7 @@
 
 import { Link } from 'lucide-react';
 // import React, { use } from 'react'
+// import "career-coach/app/globals.css";
 import { Button } from './ui/button';
 import React, { useRef, useEffect } from "react";
 import Image from "next/image";

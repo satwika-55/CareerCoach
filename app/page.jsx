@@ -1,4 +1,5 @@
 import HeroSection from "@/components/hero";
+import "./globals.css";
 import Image from "next/image";
 import {
   Card,
@@ -73,7 +74,7 @@ export default function Home() {
              return(
               <div key={index} className="flex flex-col items-center text-center space-y-4">
                 <div className="w-16 rounded-full bg-primary/10 flex items-center jutify-center">{item.icon}</div>
-                <h3 clasName="font-semibold text-xl">{item.title}</h3>
+                <h3 className="font-semibold text-xl">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
              )
@@ -92,7 +93,7 @@ export default function Home() {
                   <CardContent className="pt-6">
                     <div className="flex flex-col space-y-4">
                       <div className="flex items-center space-x-4">
-                        <div className="relative h-12 w-12 flex-shrink-0 "><Image src={testimonial.image} alt={testimonial.author} width={40} heoght={40} className="rounded-full object-cover border-2 border-primary/20"/></div>
+                        <div className="relative h-12 w-12 flex-shrink-0 "><Image src={testimonial.image} alt={testimonial.author} width={40} height={40} className="rounded-full object-cover border-2 border-primary/20"/></div>
                         <div>
                           <p className="font-semibold">{testimonial.author}</p>
                           <p className="text-sm text-muted-foreground">{testimonial.role}</p>
@@ -100,7 +101,15 @@ export default function Home() {
                         </div>
                       </div>
                       <blockquote>
-                        <p></p>
+                        <p className="text-muted-foreground italic relative">
+                          <span className="text-3xl text-primary absolute -top-4 -left-2">
+                            &quot;
+                          </span>
+                          {testimonial.quote}
+                          <span className="text-3xl text-primary absolute -bottom-4">
+                            &quot;
+                          </span>
+                        </p>
                       </blockquote>
                     </div>
                   </CardContent>
